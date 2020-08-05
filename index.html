@@ -12,7 +12,18 @@
         <div id="app">
             <div class="container">
                 <h1 class="app-title">{{ appTitle }}</h1>
-                
+                <div>
+                    <input type="text" v-model="inputTodo">
+                    <input type="button" value="Agregar" @click="addTodo">
+                    <input type="button" value="Clear" @click="clearTodo">
+                </div>
+
+            <div v-for="todo in toDoArray">
+                <p>
+                    {{todo}}    
+                </p>
+            </div>
+            
             </div>
         </div>
 
