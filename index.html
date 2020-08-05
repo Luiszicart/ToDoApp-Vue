@@ -17,13 +17,15 @@
                     <input type="button" value="Agregar" @click="addTodo">
                     <input type="button" value="Clear" @click="clearTodo">
                 </div>
-
-            <div v-for="todo in toDoArray">
-                <p>
-                    {{todo}}    
-                </p>
-            </div>
-            
+                <div class="list">
+                    <div v-for="(todo, index) in toDoArray">
+                        <p>
+                            {{todo}}
+                            <input type="button" value="Completado" @click="taskCompleted(index)">
+                            <input type="button" value="Eliminar" @click="taskRemove(index)">    
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 

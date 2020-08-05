@@ -20,3 +20,11 @@ body {
 .app-title{
     color: #32485F;
 }
+
+.list {
+    width: 400px;
+    border: 7px solid green;
+    padding: 10px;
+    margin: 10px;
+    align-items: left;
+}
