@@ -5,32 +5,26 @@ var app = new Vue({
   data: {
     appTitle: 'Luigi TodoApp!',
     toDoArray: [],
-    inputTodo: "",
-},
+    inputTodo: ''
+  },
 
   methods: {
     addTodo() {
-
       this.toDoArray.push(this.inputTodo)
-      this.inputTodo = "";
-
+      this.inputTodo = ''
     },
 
     clearTodo() {
-
-      let emptyArr = [];
-      this.toDoArray = emptyArr;
-      vm.$forceUpdate();      
+      let emptyArr = []
+      this.toDoArray = emptyArr
+      this.$forceUpdate()
     },
 
     taskRemove(index) {
-      
-      this.toDoArray.splice(index, 1);
-      vm.$forceUpdate();
+      this.toDoArray.splice(index, 1)
     },
 
     taskCompleted(index) {
-
       this.toDoArray
     }
   }

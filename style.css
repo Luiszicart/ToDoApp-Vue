@@ -10,14 +10,14 @@ body {
 }
 
 .container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: aquamarine;
     min-height: 100vh;
 }
 
-.app-title{
+.app-title {
     color: #32485F;
 }
 
@@ -26,5 +26,24 @@ body {
     border: 7px solid green;
     padding: 10px;
     margin: 10px;
-    align-items: left;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-enter-active, .list-leave-active {
+    transition: 0.5s;
+}
+
+.list-enter, .list-leave-active
+/* .list-leave-active below version 2.1.8 */
+{
+    opacity: 0;
+}
+.list-leave-to{
+    opacity:1;
+    opacity: 0;
 }

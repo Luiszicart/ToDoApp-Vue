@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Document</title>
-    </head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>Document</title>
+	</head>
 
-    <body>
-        <div id="app">
-            <div class="container">
-                <h1 class="app-title">{{ appTitle }}</h1>
-                <div>
-                    <input type="text" v-model="inputTodo">
-                    <input type="button" value="Agregar" @click="addTodo">
-                    <input type="button" value="Clear" @click="clearTodo">
-                </div>
-                <div class="list">
-                    <div v-for="(todo, index) in toDoArray">
-                        <p>
-                            {{todo}}
-                            <input type="button" value="Completado" @click="taskCompleted(index)">
-                            <input type="button" value="Eliminar" @click="taskRemove(index)">    
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- https://vuejs.org/v2/guide/#Getting-Started -->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="source.js"></script>
-    </body>
+	<body>
+		<div id="app">
+			<div class="container">
+				<h1 class="app-title">{{ appTitle }}</h1>
+				<div>
+					<input type="text" v-model="inputTodo">
+					<input type="button" value="Agregar" @click="addTodo">
+					<input type="button" value="Clear" @click="clearTodo">
+				</div>
+				<div class="list">
+					<!-- https://vuejs.org/v2/guide/transitions.html -->
+					<transition-group name="list">
+						<div v-for="(todo, index) in toDoArray" :key="index" class="list-item">
+							<p>
+								{{todo}}
+							</p>
+							<div>
+								<input type="button" value="Completado" @click="taskCompleted(index)">
+								<input type="button" value="Eliminar" @click="taskRemove(index)">
+							</div>
+						</div>
+					</transition-group>
+				</div>
+			</div>
+		</div>
+		<!-- https://vuejs.org/v2/guide/#Getting-Started -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="source.js"></script>
+	</body>
 
 </html>
