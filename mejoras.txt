@@ -1,3 +1,8 @@
 * arreglar efecto de eliminar
 * agregar efecto de completado (tachar?)
+<<<<<<< HEAD
 * mejorar botones (por mejorar)
+=======
+* mejorar botones
+* dark mode
+>>>>>>> 388312e13edc699b920430273f163e7e57118fad
