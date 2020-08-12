@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link id="mode" rel="stylesheet" href="style.css">
 	<title>Document</title>
 </head>
 
@@ -16,7 +16,10 @@
 				<input type="text" v-model="inputTodo">
 				<input type="button" value="Agregar" @click="addTodo">
 				<input type="button" value="Clear" @click="clearTodo">
+				<input type="button" value="Light Style" @click="clearThemeLight">
+				<input type="button" value="Dark Style" @click="clearThemeDark">
 			</div>
+			
 			<div class="list">
 				<!-- https://vuejs.org/v2/guide/transitions.html -->
 				<transition-group name="list">

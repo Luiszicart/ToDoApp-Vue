@@ -20,6 +20,16 @@ var app = new Vue({
       this.$forceUpdate()
     },
 
+    clearThemeLight() {
+
+      document.getElementById("mode").setAttribute("href", "style.css")      
+    },
+
+    clearThemeDark() {
+
+      document.getElementById("mode").setAttribute("href", "dark.css")     
+    },
+
     taskRemove(index) {
       this.toDoArray.splice(index, 1)
     },
