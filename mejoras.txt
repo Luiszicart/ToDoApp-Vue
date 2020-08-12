@@ -1,3 +1,3 @@
 * arreglar efecto de eliminar
 * agregar efecto de completado (tachar?)
-* mejorar botones
+* mejorar botones (por mejorar)
