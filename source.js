@@ -35,7 +35,7 @@ var app = new Vue({
     },
 
     taskCompleted(index) {
-      this.toDoArray
+      console.error("test");
     }
   }
 })

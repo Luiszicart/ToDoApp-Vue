@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link id="mode" rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Document</title>
 </head>
 
@@ -18,8 +19,9 @@
 				<input type="button" value="Clear" @click="clearTodo">
 				<input type="button" value="Light Style" @click="clearThemeLight">
 				<input type="button" value="Dark Style" @click="clearThemeDark">
+				
 			</div>
-			
+
 			<div class="list">
 				<!-- https://vuejs.org/v2/guide/transitions.html -->
 				<transition-group name="list">
@@ -29,7 +31,7 @@
 						</p>
 						<div>
 							<input type="checkbox" class="nes-checkbox" @click="taskCompleted(index)">
-							<input type="button" value="Eliminar" @click="taskRemove(index)">
+							<button @click="taskRemove(index)" class="btn"><i class="fa fa-trash"></i> Trash</button>
 						</div>
 					</div>
 				</transition-group>
