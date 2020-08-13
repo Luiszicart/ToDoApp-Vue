@@ -15,8 +15,10 @@
 			<h1 class="app-title">{{ appTitle }}</h1>
 			<div>
 				<input type="text" v-model="inputTodo">
-				<input type="button" value="Agregar" @click="addTodo">
-				<input type="button" value="Clear" @click="clearTodo">
+				<i class="fa fa-plus-circle" style="font-size:25px; margin-right:10px; margin-left:10px" @click="addTodo"></i>
+				<i class="fa fa-eraser" style="font-size:25px; margin-right:10px" @click="clearTodo"></i>
+				<!-- <i class="fa fa-house-day" style="font-size:25px" @click="clearThemeLight"></i> -->
+				<!-- <i class="fa fa-moon" style="font-size:25px" @click="clearThemeDark"></i> -->
 				<input type="button" value="Light Style" @click="clearThemeLight">
 				<input type="button" value="Dark Style" @click="clearThemeDark">
 				
@@ -32,8 +34,8 @@
 						<div>
 							<i class="fa fa-check-circle" style="font-size:35px; margin-right:10px" @click="taskCompleted(index)"></i>
 							<i class="fa fa-trash" style="font-size:35px; margin-right:10px" @click="taskRemove(index)"></i>
-						<!--	<button @click="taskCompleted(index)" class="btn"><i class="fa fa-car"></i></i></button> -->
-						<!--	<button @click="taskRemove(index)" class="btn"><i class="fas fa-trash"></i></button> -->
+							<!--	<button @click="taskCompleted(index)" class="btn"><i class="fa fa-car"></i></i></button> -->
+							<!--	<button @click="taskRemove(index)" class="btn"><i class="fas fa-trash"></i></button> -->
 						</div>
 					</div>
 				</transition-group>
