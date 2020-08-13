@@ -17,11 +17,8 @@
 				<input type="text" v-model="inputTodo">
 				<i class="fa fa-plus-circle" style="font-size:25px; margin-right:10px; margin-left:10px" @click="addTodo"></i>
 				<i class="fa fa-eraser" style="font-size:25px; margin-right:10px" @click="clearTodo"></i>
-				<!-- <i class="fa fa-house-day" style="font-size:25px" @click="clearThemeLight"></i> -->
-				<!-- <i class="fa fa-moon" style="font-size:25px" @click="clearThemeDark"></i> -->
-				<input type="button" value="Light Style" @click="clearThemeLight">
-				<input type="button" value="Dark Style" @click="clearThemeDark">
-				
+				<i class="fa fa-eye" style="font-size:25px; margin-right:10px" @click="clearThemeLight"></i>
+				<i class="fa fa-eye-slash" style="font-size:25px; margin-right:10px" @click="clearThemeDark"></i>
 			</div>
 
 			<div class="list">
