@@ -51,6 +51,8 @@ body {
     opacity: 0;
 }
 
+/*
+
 .btn {
     background-color: rgb(3, 53, 104);
     border: none;
@@ -63,3 +65,5 @@ body {
 .btn:hover {
     background-color: rgb(12, 34, 100);
 }
+
+/*
