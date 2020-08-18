@@ -1,2 +1,3 @@
-* agregar efecto de completado (tachar?)
+* agregar efecto de completado => tachar?
+
 
