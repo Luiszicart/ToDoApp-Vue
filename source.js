@@ -5,12 +5,18 @@ var app = new Vue({
   data: {
     appTitle: 'Luigi TodoApp!',
     toDoArray: [],
+    id: 0,
     inputTodo: ''
   },
 
   methods: {
     addTodo() {
-      this.toDoArray.push(this.inputTodo)
+      this.id++
+      this.toDoArray.push({
+        id: this.id,
+        todo: this.inputTodo,
+        completed: false
+      })
       this.inputTodo = ''
     },
 
@@ -21,21 +27,22 @@ var app = new Vue({
     },
 
     clearThemeLight() {
-
-      document.getElementById("mode").setAttribute("href", "style.css")      
+      document.getElementById('mode').setAttribute('href', 'style.css')
     },
 
     clearThemeDark() {
-
-      document.getElementById("mode").setAttribute("href", "dark.css")     
+      document.getElementById('mode').setAttribute('href', 'dark.css')
     },
 
-    taskRemove(index) {
-      this.toDoArray.splice(index, 1)
+    taskRemove(id) {
+
+      this.toDoArray.splice(id, 1)
     },
 
-    taskCompleted(index) {
-      console.error("test");
-    }
+    taskCompleted(id) {
+
+      console.log(this.toDoArray[id])
+      this.toDoArray[id].completed = !this.toDoArray[id].completed 
+   }
   }
 })

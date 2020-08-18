@@ -25,9 +25,10 @@
 				<!-- https://vuejs.org/v2/guide/transitions.html -->
 				<hr>
 				<transition-group name="list">
-					<div v-for="(todo, index) in toDoArray" :key="index" class="list-item">
-						<p>
-							{{todo}}
+					
+					<div v-for="(todo, index) in toDoArray" :key="todo.id" class="list-item">
+						<p :class="{ active: todo.completed }">
+							{{todo.todo}}
 						</p>
 						<div>
 							<i class="fa fa-check-circle" style="font-size:35px; margin-right:10px" @click="taskCompleted(index)"></i>
