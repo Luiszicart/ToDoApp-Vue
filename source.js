@@ -43,4 +43,5 @@ var app = new Vue({
       this.toDoArray[id].completed = !this.toDoArray[id].completed 
    }
   }
-})
+}) 
+// Mejorar aspecto visual
